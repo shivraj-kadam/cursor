@@ -1,0 +1,5 @@
+package com.cloudshop.product;
+import org.springframework.boot.CommandLineRunner; import org.springframework.stereotype.Component; import java.math.BigDecimal;
+@Component public class ProductDataLoader implements CommandLineRunner {
+private final ProductRepository repo; public ProductDataLoader(ProductRepository repo){this.repo=repo;}
+public void run(String... args){if(repo.count()==0){repo.save(new Product("Cloud Starter Kit","Starter package for learning AWS 3-tier deployments.",new BigDecimal("49.99"),"Cloud"));repo.save(new Product("Developer Desk Pack","Useful accessories for a modern development workstation.",new BigDecimal("79.99"),"Developer"));repo.save(new Product("Production Checklist","Practical checklist for preparing an application for production.",new BigDecimal("19.99"),"DevOps"));}}}
