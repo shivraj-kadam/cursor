@@ -9,7 +9,7 @@ rm -rf "$APP_DIR"
 git clone https://github.com/shivraj-kadam/cursor.git "$APP_DIR"
 
 cd "$APP_DIR/frontend"
-npm ci
+npm install
 npm run build
 
 rm -rf /var/www/studentapp
@@ -44,7 +44,6 @@ server {
 }
 NGINX
 
-# IMPORTANT: replace this placeholder before creating the Launch Template.
 sed -i 's|BACKEND_ALB_DNS|REPLACE_WITH_INTERNAL_BACKEND_ALB_DNS|' /etc/nginx/sites-available/studentapp
 
 rm -f /etc/nginx/sites-enabled/default
