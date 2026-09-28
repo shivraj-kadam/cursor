@@ -1,0 +1,6 @@
+The frontend instances use Nginx.
+Before creating the frontend Launch Template, replace:
+REPLACE_WITH_INTERNAL_BACKEND_ALB_DNS
+with the DNS name of the INTERNAL backend Application Load Balancer.
+
+Do not expose the backend ALB to the public internet.
