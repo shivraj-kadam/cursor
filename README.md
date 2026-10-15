@@ -493,14 +493,7 @@ For production deployments, use CI/CD and an AMI or deployment mechanism rather 
 
 Potentially billable resources include EC2, ALBs, NAT Gateway, RDS, Elastic IPs and Route 53 resources.
 
-For a temporary lab, clean up after testing:
-
-1. Route 53 records if no longer required
-2. Load balancers
-3. Auto Scaling Groups
-4. EC2 instances
-5. NAT Gateway
-6. Elastic IP
+For a temporary lab, clean up after testi
 7. RDS
 8. DB subnet group
 9. Security groups after dependencies are removed
